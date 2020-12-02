@@ -44,7 +44,7 @@ article {
 
 .articleContainer {
     display: grid;
-    grid-template-areas: "article" "article" "article";
+    grid-template-areas: "article" "article" "article" "article-post";
 }
 
 section {
