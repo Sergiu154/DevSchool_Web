@@ -44,13 +44,16 @@ article {
 
 .articleContainer {
     display: grid;
-    grid-template-areas: "article" "article" "article" "article-post";
+    grid-template-areas: "article" "article" "article" "custom";
 }
 
 section {
     margin-top: 50px;
 }
-
+article-post
+{
+    grid-area: custom;
+}
 .introSection {
     text-align: center;
     margin: 150px 0;
