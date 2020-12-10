@@ -56,7 +56,7 @@ class IndexPosts extends LitElement {
          ${this.articles.map((item) => {
 
             return html`
-             <article-post .articleClass=${item.articleClass} .asideText = ${item.asideText} .imageObj=${item.imageObj}></article-post>
+             <article-post .articleClass="${item.articleClass}" .asideText = "${item.asideText}" .imageObj="${item.imageObj}"></article-post>
              `
         })}
         `

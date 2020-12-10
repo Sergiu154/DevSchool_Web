@@ -45,4 +45,4 @@ class AppFooter extends LitElement {
     }
 }
 
-customElements.define('app-footer', AppFooter);
+export default  customElements.define('app-footer', AppFooter);

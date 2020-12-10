@@ -5,11 +5,7 @@ import {
 
 class ArticleDestination extends LitElement {
 
-    constructor() {
-        super();
-    }
-
-    static get style() {
+    static get styles() {
         return css`
         section {
         display: flex;
@@ -68,21 +64,24 @@ class ArticleDestination extends LitElement {
 
 
     render() {
+        console.log(this.asideText)
+        console.log(this.sursa)
         return html
             ` 
          <article>
                <img src="${this.sursa}"
                         alt="salut"/>
             
+            <div class="${this.asideText.clasa}">
                 <h2>${this.asideText.title}</h2> <br/>
                 <p>
                    ${this.asideText.text}
-
+s
                 </p>
 
                 Find more info <a href="https://crouton.net/">here</a> <br/><br/> <br/>
 
-
+            </div>
             </article>
         `
     }

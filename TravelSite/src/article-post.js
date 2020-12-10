@@ -44,7 +44,7 @@ class ArticlePost extends LitElement {
 
     }
 
-    static get style() {
+    static get styles() {
         return css`
         
         * {
@@ -109,6 +109,8 @@ class ArticlePost extends LitElement {
 
 
     render() {
+        console.log(this.articleClass)
+        console.log(this.imageObj)
         return html
             ` 
          <article class="${this.articleClass}">

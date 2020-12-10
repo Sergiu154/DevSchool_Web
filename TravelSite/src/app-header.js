@@ -51,7 +51,7 @@ class AppHeader extends LitElement {
             ${this.navElems.map(i => {
             return html`
                 
-                <li><a href=${i.link}>${i.name}</a></li>
+                <li><a href="${i.link}">${i.name}</a></li>
                 
                 `
         })}               
@@ -59,7 +59,7 @@ class AppHeader extends LitElement {
         </nav>
 
 
-        <div class=${this.ttl.cls}><h1>${this.ttl.text}</h1></div>
+        <div class="${this.ttl.cls}"><h1>${this.ttl.text}</h1></div>
 
     </div>
 </header>`
@@ -146,4 +146,4 @@ class AppHeader extends LitElement {
 
 }
 
-customElements.define('app-header', AppHeader);
+export default  customElements.define('app-header', AppHeader);
