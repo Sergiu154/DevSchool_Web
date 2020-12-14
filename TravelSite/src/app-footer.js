@@ -1,6 +1,6 @@
 import {
     LitElement, html, css
-} from 'https://unpkg.com/lit-element@2.4.0/lit-element.js?module'
+} from 'lit-element'
 
 
 class AppFooter extends LitElement {
@@ -23,7 +23,7 @@ class AppFooter extends LitElement {
         `
     }
 
-    static get properites() {
+    static get properties() {
 
         return {
             footerText: {type: String},
@@ -45,4 +45,4 @@ class AppFooter extends LitElement {
     }
 }
 
-export default  customElements.define('app-footer', AppFooter);
+export default customElements.define('app-footer', AppFooter);

@@ -1,47 +1,19 @@
 import {
     LitElement, html, css
-} from 'https://unpkg.com/lit-element@2.4.0/lit-element.js?module'
+} from 'lit-element'
 
 class ArticlePost extends LitElement {
 
     static get properties() {
 
         return {
-            articleClass: {type: String},
-            asideText: {type: Object},
-            imageObj: {type: Object}
+            dataObj: {type: Object},
         };
     }
 
 
     constructor() {
         super();
-
-        /*
-        this.articleClass = "reverseArticle"
-        this.asideText = {
-            clasa: "asideText",
-            title: "Article1",
-            subtitle: "Subtitle article 1",
-            text: " " +
-                "            Duis placerat tincidunt convallis. Integer posuere massa ac neque malesuada finibus. Nullam\n" +
-                "            pharetra\n" +
-                "            erat at diam porttitor varius nec eget odio. Aenean ullamcorper egestas pulvinar. Vestibulum\n" +
-                "            molestie\n" +
-                "            interdum orci, at semper lacus placerat eget. Morbi blandit lacus nec ante luctus, et commodo\n" +
-                "            lacus\n" +
-                "            aliquam. Aenean gravida, tortor sit amet tempor dictum, nunc odio pellentesque metus, eget\n" +
-                "            convallis\n" +
-                "            nisl metus non turpis. In molestie scelerisque accumsan. Cras vestibulum mi elit, ultricies\n" +
-                "            facilisis\n" +
-                "            magna eleifend aliquam."
-        }
-        this.imageObj = {
-            clasa: "img_div",
-            sursa: "https://i.picsum.photos/id/608/1200/900.jpg?hmac=4L3lIqP3LkdecrcxKL95gVjwKZJUNca9yCaIoz6-KUY"
-        }
- */
-
     }
 
     static get styles() {
@@ -109,20 +81,20 @@ class ArticlePost extends LitElement {
 
 
     render() {
-        console.log(this.articleClass)
-        console.log(this.imageObj)
+        console.log(this.dataObj.articleClass)
+        // console.log(this.imageObj)
         return html
             ` 
-         <article class="${this.articleClass}">
-                <div class="${this.imageObj.clasa} "><img
-                        src="${this.imageObj.sursa}"
+         <article class="${this.dataObj.articleClass}">
+                <div class="${this.dataObj.divClass} "><img
+                        src="${this.dataObj.src}"
                         alt="salut"/></div>
 
-                <div class="${this.asideText.clasa}">
-                    <h2>${this.asideText.title}</h2> <br/>
-                    <h4>${this.asideText.subtitle}</h4> <br/>
+                <div class="asideText">
+                    <h2>${this.dataObj.title}</h2> <br/>
+                    <h4>${this.dataObj.subtitle}</h4> <br/>
                     <p>
-                       ${this.asideText.text}
+                       ${this.dataObj.text}
 
                     </p>
 

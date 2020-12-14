@@ -6,7 +6,7 @@ def seed_index(baseUrl,articles):
 			"https://i.picsum.photos/id/295/1200/900.jpg?hmac=iKGvGlmnukR7LzynJfJ9Z7HnsVr9ZjDHllo8AGIE7po",
 			"https://i.picsum.photos/id/323/1200/900.jpg?hmac=TYBz_ypTHr_a9pp9ZF7nnXROO9WyR-9GCPjy_HK6R9w",
 			]
-	articleClass = ["","reveseArticle",""]
+	articleClass = ["","reverseArticle",""]
 	divImgClass = ["img_div","img_div","img_div"]
 	titles= ["Article 1","Article 2","Article 3"]
 
@@ -125,8 +125,8 @@ def main():
 	articles  = 'articles.json'
 	destinations = 'destinations.json'
 
-	# seed_index(baseUrl,articles)
-	seed_destination(baseUrl,destinations)
+	seed_index(baseUrl,articles)
+	# seed_destination(baseUrl,destinations)
 
 
 main()

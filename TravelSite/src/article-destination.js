@@ -1,6 +1,6 @@
 import {
     LitElement, html, css
-} from 'https://unpkg.com/lit-element@2.4.0/lit-element.js?module'
+} from 'lit-element'
 
 
 class ArticleDestination extends LitElement {
@@ -56,30 +56,30 @@ class ArticleDestination extends LitElement {
 
     static get properties() {
         return {
-            asideText: {type: Object},
-            sursa: {type: String}
+            dataObj: {type: Object},
+
 
         };
     }
 
 
     render() {
-        console.log(this.asideText)
-        console.log(this.sursa)
+        // console.log(this.asideText)
+        // console.log(this.sursa)
         return html
             ` 
          <article>
-               <img src="${this.sursa}"
+               <img src="${this.dataObj.src}"
                         alt="salut"/>
             
-            <div class="${this.asideText.clasa}">
-                <h2>${this.asideText.title}</h2> <br/>
+            <div class="${this.dataObj.divClass}">
+                <h2>${this.dataObj.title}</h2> <br/>
                 <p>
-                   ${this.asideText.text}
+                   ${this.dataObj.description}
 s
                 </p>
 
-                Find more info <a href="https://crouton.net/">here</a> <br/><br/> <br/>
+                Find more info <a href=${this.dataObj.moreInfoSrc}>here</a> <br/><br/> <br/>
 
             </div>
             </article>

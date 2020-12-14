@@ -1,7 +1,6 @@
 import {
     LitElement, html, css
-} from 'https://unpkg.com/lit-element@2.4.0/lit-element.js?module'
-
+} from 'lit-element'
 
 
 class AppHeader extends LitElement {
@@ -26,11 +25,11 @@ class AppHeader extends LitElement {
         this.navElems = [
             {
                 name: 'Home',
-                link: 'index.html'
+                link: '/'
             },
             {
                 name: 'Destinations',
-                link: 'destinations.html'
+                link: '/destinations'
             },
             {
                 name: 'Language',
@@ -146,4 +145,4 @@ class AppHeader extends LitElement {
 
 }
 
-export default  customElements.define('app-header', AppHeader);
+export default customElements.define('app-header', AppHeader);
